@@ -92,7 +92,7 @@ class MyApp extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('  สรุปรายละเอียดค่าจอดรถ',),
+                  Text('  สรุปรายละเอียดค่าจอดรถ ',),
                 ],
               )
 
