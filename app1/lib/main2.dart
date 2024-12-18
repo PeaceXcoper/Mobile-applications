@@ -84,47 +84,74 @@ class MyApp extends StatelessWidget {
               children: [
                 
                 Image.network(
-                  "https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg",
+                  "https://e7.pngegg.com/pngimages/291/917/png-clipart-car-car-white-thumbnail.png",
                   width: 220,
                 ),
                 SizedBox(
                   height: 15,
                 ),
-                Text('ขอบคุณที่ใช้บริการ ggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg',
+                Text('ขอบคุณที่ใช้บริการ',
                     style: TextStyle(
                         fontSize: 20, color: Color.fromARGB(255, 44, 245, 44))),
                 Text('ขอให้เดินทางปลอดภัย'),
                 SizedBox(
                   height: 30,
                 ),
-              TextField(
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'User name',
-                  hintText: 'Enter your name',
-                ),
-              ),
-              SizedBox(height: 15,),
 
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Password',
-                  hintText: 'Enter password',
-                ),
+              // TextField(
+              //   decoration: InputDecoration(
+              //     border: OutlineInputBorder(),
+              //     labelText: 'User name',
+              //     hintText: 'Enter your name',
+              //   ),
+              // ),
+              // SizedBox(height: 15,),
+
+              // TextField(
+              //   obscureText: true,
+              //   decoration: InputDecoration(
+              //     border: OutlineInputBorder(),
+              //     labelText: 'Password',
+              //     hintText: 'Enter password',
+              //   ),
                 
-              ),
+              // ),
 
               Container(
                 margin: EdgeInsets.all(10),
-                // decoration: EdgeInsets.all(8),
+                
                 decoration:  BoxDecoration(
-                  color: Colors.redAccent,
+                  color: const Color.fromARGB(255, 196, 195, 195),
                   borderRadius: BorderRadius.all(Radius.circular(10))
                 ),
-                alignment: Alignment.centerRight,
-                child: Text('History'),
+                alignment: Alignment.center,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    children: [
+                      Text('Time',style: TextStyle(fontSize: 30,), ),
+                      SizedBox(height: 15,),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Column(
+                            children: [
+                              Icon(Icons.access_time,size: 30,),
+                              Text('2:30 Hr.',style: TextStyle(fontSize: 20),)
+                            ],
+                          ),
+                          
+                          Column(
+                            children: [
+                              Icon(Icons.battery_0_bar,size: 30,),
+                              Text('28.152 KW',style: TextStyle(fontSize: 20),)
+                            ],
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
                 
 
               ),
