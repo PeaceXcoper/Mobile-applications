@@ -1,39 +1,5 @@
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(
-//     MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       theme: ThemeData(
-//         appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 198, 227, 9)),
-//         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
-//         useMaterial3: true,
-//       ),
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('App Bar'),
-//         ),
-//         body: Column(
-//           children: [
-//             const Text('Hello World'),
-//             const Text('Cs App Kmutnb'),
-//             ElevatedButton(
-//               onPressed: () {
-//                 // print('object');
-//                 debugPrint('object debug');
-//               },
-//               child: const Text(
-//                 'Submit',
-//                 style: TextStyle(fontSize: 20),
-//               ),
-//             ),
-//           ],
-//         ),
-//       ),
-//     ),
-//   );
-// }
-
 void main() {
   runApp(const MyApp());
 }
@@ -46,93 +12,156 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        appBarTheme: const AppBarTheme(color: Color.fromARGB(255, 198, 227, 9)),
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
+        appBarTheme: const AppBarTheme(color: Colors.purple),
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Center(child:
-          const Text('App Bar')),
-
-          // leading: IconButton(
-          //   icon: Icon(Icons.menu),
-          //   onPressed: () {
-          //     debugPrint('Button pressed');
-          //   },
-          // ),
-          // actions: [
-          //   IconButton(
-          //     icon: Icon(Icons.category),
-          //     onPressed: () {
-          //       debugPrint('eiei pressed');
-          //     },
-          //   ),
-          //   IconButton(
-          //     icon: Icon(Icons.adb_outlined),
-          //     onPressed: () {
-          //       debugPrint('eiei pressed');
-          //     },
-          //   ),
-          // ],
+          title: const Text(
+            "PEA VOLTA",
+            style: TextStyle(color: Colors.white),
+          ),
+          centerTitle: true,
         ),
-        body: Center(
+        body: Padding(
+          padding: const EdgeInsets.all(16.0),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 15,),
-              Image.network(
-                "https://cdn.pixabay.com/photo/2024/02/28/07/42/european-shorthair-8601492_640.jpg",
-                width: 220,
+              Center(
+                child: Column(
+                  children: [
+                    Image.network(
+                      "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/color-logo-design-template-2b21eef46e5a1a5cdf9bb5a001074bd1_screen.jpg?ts=1567014385",
+                      width: 220,
+                    ),
+                    const SizedBox(height: 20),
+                    const Text(
+                      "ขอบคุณที่ใช้บริการ",
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(height: 5),
+                    const Text("เราหวังว่าคุณจะเดินทางถึงที่หมายอย่างปลอดภัย"),
+                    const SizedBox(height: 20),
+                  ],
+                ),
               ),
-              SizedBox(height: 15,),
-              Text('ขอบคุณที่ใช้บริการ',style: TextStyle(fontSize: 20,color: Color.fromARGB(255, 44, 245, 44))),
-              Text('ขอให้เดินทางปลอดภัย'),
-              SizedBox(height: 30,),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text('  สรุปรายละเอียดค่าจอดรถ ',),
-                ],
-              )
 
-              // Image.asset(
-              //   'assets/images/cat.jpg',
-              //   width: 220,
-              // ),
-              // IconButton(
-              //   icon: const Icon(
-              //     Icons.favorite,
-              //     size: 60,
-              //     color: Colors.pinkAccent,
-              //   ),
-              //   onPressed: () {
-              //     debugPrint('eiei pressed');
-              //   },
-              // ),
-              // Icon(
-              //   Icons.heart_broken,
-              //   size: 60,
-              //   color: Colors.pinkAccent,
-              // ),
-              // ElevatedButton(
-              //   onPressed: () {
-              //     debugPrint('Button pressed');
-              //   },
-              //   child: const Text(
-              //     'Submit',
-              //     style: TextStyle(fontSize: 20),
-              //   ),
-              // ),
+              const SizedBox(height: 10),
+
+              const Text(
+                "สรุปรายละเอียดการจอดรถ",
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(height: 10),
+
+            
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  
+                  Row(
+                    children: const [
+                      Icon(Icons.date_range_outlined), // ไอคอน
+                      SizedBox(width: 8), // ช่องว่างระหว่างไอคอนกับข้อความ
+                      Text("วันที่จอดรถ",
+                          style: TextStyle(fontSize: 16)), // ข้อความ
+                    ],
+                  ),
+                 
+                  const Text(
+                    "9 กันยายน 2565",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                ],
+              ),
+              SizedBox(height: 10),
+
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Row(
+                    children: [
+                      Icon(Icons.car_crash),
+                      SizedBox(width: 8),
+                      Text("สถานที่", style: TextStyle(fontSize: 16)),
+                    ],
+                  ),
+                  Text("PEA VOLTA บางปะกง",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                ],
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Row(
+                    children: [
+                      Icon(Icons.card_membership),
+                      SizedBox(width: 8),
+                      Text("ประเภทรถ", style: TextStyle(fontSize: 16)),
+                    ],
+                  ),
+                  Text("CQS2",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                ],
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Row(
+                    children: [
+                      Icon(Icons.access_alarms),
+                      SizedBox(width: 8),
+                      Text("ระยะเวลาการจอด", style: TextStyle(fontSize: 16)),
+                    ],
+                  ),
+                  Text("00:12:32",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                ],
+              ),
+              SizedBox(height: 10),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  Row(
+                    children: [
+                      Icon(Icons.charging_station),
+                      SizedBox(width: 8),
+                      Text("จำนวนหน่วย", style: TextStyle(fontSize: 16)),
+                    ],
+                  ),
+                  Text("8.314 kWh",
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                ],
+              ),
+
+              const SizedBox(height: 100),
+
+              // ค่าบริการรวม
+              const Center(
+                child: Text(
+                  "ค่าบริการรวมทั้งหมด: 49.38 บาท",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.purple,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
-
-
-
-
         floatingActionButton: FloatingActionButton(
-            onPressed: () {}, child: Icon(Icons.emoji_emotions_outlined)),
+          onPressed: () {},
+          child: const Icon(Icons.check),
+        ),
       ),
     );
   }
