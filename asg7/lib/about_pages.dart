@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:asg7/welcome_page2.dart';
 import 'package:asg7/display_page2.dart';
 import 'package:asg7/my_futurebuilder_page.dart';
+import 'package:asg7/http_basic.dart';
 
 
 class AboutPages extends StatelessWidget {
@@ -79,6 +80,13 @@ class AboutPages extends StatelessWidget {
                   Navigator.pushNamed(context, '/my_futurebuilder_page');
                 },
                 child: const Text('Futurebuilder page'),
+              ),
+                            ElevatedButton(
+                
+                onPressed: () {
+                  Navigator.pushNamed(context, '/http_basic');
+                },
+                child: const Text('http basic'),
               ),
               const SizedBox(height: 10),
 Center(

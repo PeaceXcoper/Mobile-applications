@@ -3,6 +3,7 @@ import 'package:asg7/about_pages.dart';
 import 'package:asg7/welcome_page2.dart';
 import 'package:asg7/display_page2.dart';
 import 'package:asg7/my_futurebuilder_page.dart';
+import 'package:asg7/http_basic.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,6 +34,8 @@ class MyApp extends StatelessWidget {
             DisplayPage(name: '',), 
          '/my_futurebuilder_page': (context) =>
             MyFutureBuilderPage(), 
+          '/http_basic': (context) => 
+          HttpBasic(),
       },
       home: const AboutPages(),
     );
